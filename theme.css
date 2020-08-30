@@ -691,7 +691,17 @@ html:not(.platform-win) .container-1r6BKw > *{
     overflow:  auto !important;
 }
 
-/* --+ Itens*/
+/* --+ Submenu padding fix*/
+.submenuContainer-2gbm7M .layer-v9HyYc {
+    margin: 0 -8px;
+}
+
+/* reset for submenus in submenu */
+.submenuContainer-2gbm7M .layer-v9HyYc > div > div > div > .submenuContainer-2gbm7M .layer-v9HyYc {
+    margin: unset;
+}
+
+/* --+ Items*/
 .colorDefault-2K3EoJ.focused-3afm-j, .colorDefault-2K3EoJ:active:not(.hideInteraction-1iHO1O){
     background: linear-gradient(90deg, #fff3, #fff1);
     border-left: 3px solid var(--color);
