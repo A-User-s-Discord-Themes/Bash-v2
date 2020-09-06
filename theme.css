@@ -371,7 +371,7 @@ html:not(.platform-win) .container-1r6BKw > *{
 }
 
 .form-2fGMdU{
-    margin-top: 12px;
+    /*margin-top: 12px;*/
     padding: 0;
 }
 
@@ -386,10 +386,35 @@ html:not(.platform-win) .container-1r6BKw > *{
 
 /* ---+ Typing */
 .typing-2GQL18{
+    position: fixed;
+    top:5px;
+    right: 5px;
+    left: unset;
+    max-width: 400px;
+}
+
+.platform-win .typing-2GQL18{
+    right: 90px;
+}
+
+/* --+ Typing box and member wrapper */
+.membersWrap-2h-GB4, .searchResultsWrap-3-pOjs{
+    height: calc(100% - 52px);
+}
+
+.messagesWrapper-1sRNjr{
+    margin-bottom: 52px;
+}
+
+.chatContent-a9vAAp{
+    position: static;
+}
+
+.form-2fGMdU{
     position: absolute;
-    top:-14px;
+    bottom:0;
     left:0;
-    right: 0;
+    width: 100%;
 }
 
 /* --+ Elements */
@@ -469,6 +494,57 @@ html:not(.platform-win) .container-1r6BKw > *{
 .clickable-1JJAn8:hover .layout-2DM8Md{
     background: #fff2;
     backdrop-filter: blur(4px);
+}
+
+/* --+ Search Wrapper */
+
+.searchResultsWrap-3-pOjs{
+    width: calc(100% - 300px);
+    transition: width 1s;
+}
+
+.chatContent-a9vAAp:hover + .searchResultsWrap-3-pOjs{
+    width: 400px;
+}
+
+/* ---+ Styling */
+.searchResultsWrap-3-pOjs, .channelName-1JRO3C{
+    background: transparent;
+}
+
+.searchResult-9tQ1uo:after, .searchResult-9tQ1uo:before{
+    content: unset;
+}
+
+.searchResultMessage-1fxgXh.after-20SH8W, .searchResultMessage-1fxgXh.before-2RL1Gz{
+    display: none;
+}
+
+.searchResultMessage-1fxgXh.hit-1fVM9e{
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    position: relative;
+}
+
+.searchResult-9tQ1uo .hit-1fVM9e .messageGroupCozy-2-Q370{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.jumpButton-JkYoYK{
+    background: #0004;
+    backdrop-filter: blur(5px);
+}
+
+.channelSeparator-1DOiGt:before{
+    display: none;
+}
+
+.channelName-1JRO3C, .searchHeader-2XoQg7{
+    font-weight: 400;
+    font-size: 15px;
+    box-shadow: none;
 }
 
 /* -+ Friends, Libary and etc. Everything from Home */
