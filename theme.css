@@ -387,8 +387,8 @@ html:not(.platform-win) .container-1r6BKw > *{
 /* ---+ Typing */
 .typing-2GQL18{
     position: fixed;
-    top:5px;
-    right: 5px;
+    top:3px;
+    right: 3px;
     left: unset;
     max-width: 400px;
 }
