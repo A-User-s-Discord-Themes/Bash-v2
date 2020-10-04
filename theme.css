@@ -23,14 +23,38 @@
 
 /*** User vars ***/
 :root{
-    --bg: url("https://media.discordapp.net/attachments/539180316447997974/746844642628337674/alena-aenami-eclipse-1k.png");
+    --bg: url(""); /*Put inside the " your own image URL*/
     --bgblackness: #00000048;
+    --bgopacity: 1.0;
     --window-border-radius: 10px;
     --color: #b24848;
     --coloralt: #24192a;
 }
 
 /*** Code  ***/
+
+/* -+ Glasscord support */
+:root{
+	/* Here you can define properties for use with Glasscord. */
+
+	/* Windows-specific properties */
+	/* Blur mode. Available types: acrylic (strong blur), blurbehind (light blur), transparent */
+	--glasscord-win-blur: blurbehind;
+
+	/* macOS-specific properties */
+	/* Vibrancy mode */
+	--glasscord-macos-vibrancy: fullscreen-ui;
+
+	/* Linux-specific properties */
+	/* Should Glasscord send a request to your window compositor to blur behind Discord's window? */
+    --glasscord-linux-blur: true;
+    --glasscord-gnome-sigma: 100; /*--glasscord-gnome-sigma*/
+
+	/* Discord-specific properties */
+	/* Custom (forced) titlebar */
+	/* native (default), windows, osx, linux (framed) */
+	--glasscord-titlebar: osx;
+}
 
 /* + Basic */
 
@@ -52,6 +76,7 @@
     right: 0;
     width: 100%;
     height: 100%;
+    opacity: var(--bgopacity);
     background: var(--bg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -209,6 +234,10 @@ html:not(.platform-win) .container-1r6BKw > *{
     background: #0002;
 }
 
+.glasscord .content-3at_AU{
+    backdrop-filter: none;
+}
+
 .modeMuted-3osy7j .icon-1_QxNX{
     color: transparent;
     position: relative;
@@ -238,6 +267,10 @@ html:not(.platform-win) .container-1r6BKw > *{
 .modeSelected-1zApJ_ .content-3at_AU{
     backdrop-filter: blur(7.5px);
     background: #0004;
+}
+
+.glasscord .content-3at_AU{
+    backdrop-filter: none !important;
 }
 
 .modeSelected-1zApJ_:hover .content-3at_AU{
@@ -371,7 +404,7 @@ html:not(.platform-win) .container-1r6BKw > *{
 }
 
 .form-2fGMdU{
-    /*margin-top: 12px;*/
+    margin-top: 6px;
     padding: 0;
 }
 
@@ -386,35 +419,15 @@ html:not(.platform-win) .container-1r6BKw > *{
 
 /* ---+ Typing */
 .typing-2GQL18{
-    position: fixed;
-    top:3px;
-    right: 3px;
-    left: unset;
-    max-width: 400px;
-}
-
-.platform-win .typing-2GQL18{
-    right: 90px;
-}
-
-/* --+ Typing box and member wrapper */
-.membersWrap-2h-GB4, .searchResultsWrap-3-pOjs{
-    height: calc(100% - 52px);
-}
-
-.messagesWrapper-1sRNjr{
-    margin-bottom: 52px;
-}
-
-.chatContent-a9vAAp{
-    position: static;
-}
-
-.form-2fGMdU{
     position: absolute;
-    bottom:0;
-    left:0;
-    width: 100%;
+    top:-45px;
+    right: 25px;
+    left: unset;
+    z-index: 1;
+    background: #fff1;
+    padding: 5px;
+    padding-right: 10px;
+    border-radius: 10px;
 }
 
 /* --+ Elements */
@@ -429,6 +442,10 @@ html:not(.platform-win) .container-1r6BKw > *{
     backdrop-filter: blur(1em);
     background: transparent;
     position: relative;
+}
+
+.glasscord .mentioned-xhSam7{
+    backdrop-filter: none;
 }
 
 .mentioned-xhSam7::after{
@@ -474,6 +491,10 @@ html:not(.platform-win) .container-1r6BKw > *{
     backdrop-filter: blur(1em);
 }
 
+.glasscord .embedFull-2tM8--{
+    backdrop-filter: none;
+}
+
 .grid-1nZz7S{
     padding: 0px 20px 20px 20px;
 }
@@ -494,6 +515,10 @@ html:not(.platform-win) .container-1r6BKw > *{
 .clickable-1JJAn8:hover .layout-2DM8Md{
     background: #fff2;
     backdrop-filter: blur(4px);
+}
+
+.glasscord .clickable-1JJAn8:hover .layout-2DM8Md{
+    backdrop-filter: none;
 }
 
 /* --+ Search Wrapper */
@@ -537,6 +562,10 @@ html:not(.platform-win) .container-1r6BKw > *{
     backdrop-filter: blur(5px);
 }
 
+.glasscord .jumpButton-JkYoYK{
+    backdrop-filter: none;
+}
+
 .channelSeparator-1DOiGt:before{
     display: none;
 }
@@ -565,6 +594,10 @@ html:not(.platform-win) .container-1r6BKw > *{
     border-radius: 32px;
     background: #0002;
     backdrop-filter: blur(20px);
+}
+
+.glasscord .peopleListItem-2nzedh.active-rhSpJJ, .glasscord .peopleListItem-2nzedh:hover{
+    backdrop-filter: none;
 }
 
 .actionButton-uPB8Fs{
@@ -606,6 +639,10 @@ html:not(.platform-win) .container-1r6BKw > *{
     border-radius: 8px;
 }
 
+:root.glasscord .wrapper-3D2qGf{
+    backdrop-filter: none;
+}
+
 :root .outer-1AjyKL.active-1xchHY, :root .outer-1AjyKL.interactive-3B9GmY:hover{
     background: #0002;
 }
@@ -633,6 +670,11 @@ html:not(.platform-win) .container-1r6BKw > *{
     border-radius: 8px;
     background: #0003;
     backdrop-filter: blur(1em);
+}
+
+.glasscord .userPopout-3XzG_A{
+    backdrop-filter: none;
+    background: #0009;
 }
 
 .footer-1fjuF6{
@@ -762,6 +804,11 @@ html:not(.platform-win) .container-1r6BKw > *{
     backdrop-filter: blur(20px);
 }
 
+.glasscord .menu-3sdvDG::before{
+    background: #0008;
+    backdrop-filter: none;
+}
+
 :root .scroller-3BxosC{
     padding: 0px 0;
     overflow:  auto !important;
@@ -844,6 +891,10 @@ html:not(.platform-win) .container-1r6BKw > *{
     backdrop-filter: blur(2em);
     animation: fade .3s ease;
     background: #0002;
+}
+
+.glasscord .layer-2KE1M9, .glasscord .modal-3c3bKg{
+    background: #000a;
 }
 
 html:not(.platform-linux) .transparent:not(.maximized) .layer-2KE1M9, html:not(.platform-linux) .transparent:not(.maximized) .modal-3c3bKg{
@@ -1107,6 +1158,10 @@ html:not(.platform-linux) .transparent:not(.maximized) .header-QKLPzZ .wrapper-3
     backdrop-filter: blur(2em);
 }
 
+.glasscord .standardSidebarView-3F1I7i{
+    backdrop-filter: none;
+}
+
 /* -+ Sidebar Region */
 .sidebarRegionScroller-3MXcoP{
     background: transparent;
@@ -1261,13 +1316,17 @@ html:not(.platform-linux) .transparent:not(.maximized) .header-QKLPzZ .wrapper-3
     border-radius: 7px;
     box-shadow: unset;
 }
+.glasscord .tooltip-2QfLtc{
+    backdrop-filter: none !important;
+    background: #0008;
+}
 
 .tooltipPointer-3ZfirK{
     display: none;
 }
 
 :root .tooltipBlack-PPG47z{
-    background: #0004;
+    background: #000a;
 }
 
 /* *** Animations *** */
