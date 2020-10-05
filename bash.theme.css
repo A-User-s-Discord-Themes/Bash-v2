@@ -1,0 +1,19 @@
+/**
+ * @name Bash
+ * @description A theme that changes the appearence with discord. Also it has a lot of blurs :-)
+ * @author A user
+ * @version 1.0
+ * @source https://github.com/A-User-s-Discord-Themes/Bash-v2
+ * @invite jGmSTkk
+*/
+
+@import url('https://a-user-s-discord-themes.github.io/Bash-v2/theme.css');
+
+:root{
+    --bg: url(""); /*Put inside the " your own image URL*/
+    --bgblackness: #00000048;
+    --bgopacity: 1.0;
+    --window-border-radius: 10px;
+    --color: #b24848;
+    --coloralt: #24192a;
+}
