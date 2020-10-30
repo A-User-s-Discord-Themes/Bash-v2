@@ -23,8 +23,8 @@
 
 /*** User vars ***/
 :root{
-    --bg: url(""); /*Put inside the " your own image URL*/
-    --bgblackness: #00000048;
+    --bg: url(""); /*Put inside the "" your own image URL*/
+    --bgblackness: #000000bb;
     --bgopacity: 1.0;
     --window-border-radius: 10px;
     --color: #b24848;
