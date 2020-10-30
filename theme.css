@@ -24,7 +24,7 @@
 /*** User vars ***/
 :root{
     --bg: url(""); /*Put inside the "" your own image URL*/
-    --bgblackness: #000000bb;
+    --bgblackness: #000000a0;
     --bgopacity: 1.0;
     --window-border-radius: 10px;
     --color: #b24848;
