@@ -25,7 +25,7 @@
 
 /*** User vars ***/
 :root{
-    --bg: url("https://media.discordapp.net/attachments/539180316447997974/783464503039361065/screen15.jpg"); /*Put inside the "" your own image URL*/
+    --bg: url(""); /*Put inside the "" your own image URL*/
     --bgblackness: #000000a0;
     --bgopacity: 1.0;
     --window-border-radius: 0px;
