@@ -25,7 +25,7 @@
 
 /*** User vars ***/
 :root{
-    --bg: url(""); /*Put inside the "" your own image URL*/
+    --bg: url("https://media.discordapp.net/attachments/539180316447997974/783464503039361065/screen15.jpg"); /*Put inside the "" your own image URL*/
     --bgblackness: #000000a0;
     --bgopacity: 1.0;
     --window-border-radius: 0px;
@@ -58,6 +58,11 @@
     --glasscord-titlebar: native;
 
     --glasscord-blur-corner-radius: 0;
+}
+
+/* + Theme version */
+:root{
+    --version: "2.A";
 }
 
 /* + Premium shit personalization */
@@ -186,6 +191,10 @@ html:not(.platform-win) .container-1r6BKw > *{
 }
 
 /* + Sidebar */
+
+.container-3w7J-x{
+    background: transparent;
+}
 
 /* -+ Autohide plugin */
 .sidebar-2K8pFh, .membersWrap-2h-GB4{
@@ -439,6 +448,16 @@ html:not(.platform-win) .container-1r6BKw > *{
     border-radius: 10px;
 }
 
+/* --+ Button container (where you click to add reactions n stuff) */
+.wrapper-2aW0bm{
+    background: #fff2;
+    backdrop-filter: blur(10px);
+}
+
+.container-3npvBV{
+    transition: opacity 300ms;
+}
+
 /* --+ Elements */
 
 /* ---+ weird space */
@@ -517,7 +536,7 @@ html:not(.platform-win) .container-1r6BKw > *{
 
 /* -+ Members */
 .layout-2DM8Md{
-    border-radius: 30px;
+    border-radius: 10px;
     transition: all 200ms;
 }
 
@@ -677,7 +696,7 @@ html:not(.platform-win) .container-1r6BKw > *{
     flex-direction: row;
     box-shadow: unset;
     border-radius: 8px;
-    background: #0003;
+    background: #fff2;
     backdrop-filter: blur(1em);
 }
 
@@ -797,9 +816,8 @@ html:not(.platform-win) .container-1r6BKw > *{
 
 /* -+ Context Menu*/
 .menu-3sdvDG{
-    background: transparent;
-    border-radius: 2px;
-    background: #0004;
+    border-radius: 6px;
+    background: #fff2;
     overflow: auto;
 }
 
@@ -882,11 +900,11 @@ html:not(.platform-win) .container-1r6BKw > *{
 }
 
 .wrapper-3_530D{
-    background: #0002;
-    border-radius: 30px;
-    padding: 0;
+    background: #0003;
+    border-radius: 0;
+    padding: 0 8px;
     overflow: hidden;
-    margin: 0 8px;
+    margin: 0;
 }
 
 
@@ -1199,15 +1217,15 @@ html:not(.platform-linux) .transparent:not(.maximized) .header-QKLPzZ .wrapper-3
 
 /* -+ Cards */
 .card-3Qj_Yx{
-    background: #0004;
+    background: #fff2;
     border-radius: 10px;
     border: none;
 }
 
 /* --+ User card*/
 /* ---+ USRBG */
-.userSettingsAccount-2eMFVR .userInfoEditing-1CEzdT, .userSettingsAccount-2eMFVR .userInfoViewing-16kqK3{
-    transform: translateZ(0); /* position: fixed; lock */
+/* .userSettingsAccount-2eMFVR .userInfoEditing-1CEzdT, .userSettingsAccount-2eMFVR .userInfoViewing-16kqK3{
+    transform: translateZ(0);d
     overflow: hidden;
 }
 
@@ -1224,6 +1242,19 @@ html:not(.platform-linux) .transparent:not(.maximized) .header-QKLPzZ .wrapper-3
     z-index: -1;
     pointer-events: none;
     filter: brightness(.7) blur(5px);
+} */
+
+.background-1QDuV2{
+    background: #fff2;
+    border-radius: 15px;
+}
+
+.fieldList-21DyL8{
+    background: transparent;
+}
+
+.fieldList-21DyL8 .button-38aScr{
+    background: transparent;
 }
 
 /* -+ Buttons */
@@ -1314,6 +1345,37 @@ html:not(.platform-linux) .transparent:not(.maximized) .header-QKLPzZ .wrapper-3
 
 .themeDefault-24hCdX.valueChecked-m-4IJZ::after{
     background: var(--color);
+}
+
+/* -+ Radio buttons */
+.item-26Dhrx{
+    background: transparent;
+}
+
+.item-26Dhrx[aria-checked=true]{
+    background: #fff2;
+}
+
+.radioIconForeground-XwlXQN{
+    color: var(--color);
+    transition: r 300ms;
+}
+
+.item-26Dhrx[aria-checked=true]:hover .radioIconForeground-XwlXQN{
+    r: 11;
+}
+
+/* --+ Privacy & Safety Radio Buttons */
+.radioBar-bMNUI-[style^="--radio-bar-accent-color:"] .radioIconForeground-XwlXQN{
+    color: var(--radio-bar-accent-color);
+}
+
+/* -+ Version */
+
+.info-1VyQPT .colorMuted-HdFt4q:nth-last-child(1)::after{
+    content: "\a Bash v2 version " var(--version);
+    white-space: pre;
+    text-transform: none;
 }
 
 /* + Tooltips */
