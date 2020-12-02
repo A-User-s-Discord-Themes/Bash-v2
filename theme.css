@@ -555,14 +555,14 @@ html:not(.platform-win) .container-1r6BKw > *{
 
 /* --+ Search Wrapper */
 
-.searchResultsWrap-3-pOjs{
+/* .searchResultsWrap-3-pOjs{
     width: calc(100% - 300px);
     transition: width 1s;
 }
 
 .chatContent-a9vAAp:hover + .searchResultsWrap-3-pOjs{
     width: 400px;
-}
+} */
 
 /* ---+ Styling */
 .searchResultsWrap-3-pOjs, .channelName-1JRO3C{
