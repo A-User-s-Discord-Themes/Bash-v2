@@ -175,7 +175,11 @@ html:not(.platform-win) .container-1r6BKw > *{
 }
 
 .platform-win .container-1r6BKw{
-    height: 60px;
+    height: 50px;
+}
+
+.topic-TCb_qw{
+    margin-bottom: -10px;
 }
 
 /* + Servers */
@@ -1206,26 +1210,6 @@ html:not(.platform-linux) .transparent:not(.maximized) .header-QKLPzZ .wrapper-3
 }
 
 /* --+ User card*/
-/* ---+ USRBG */
-/* .userSettingsAccount-2eMFVR .userInfoEditing-1CEzdT, .userSettingsAccount-2eMFVR .userInfoViewing-16kqK3{
-    transform: translateZ(0);d
-    overflow: hidden;
-}
-
-.userSettingsAccount-2eMFVR .userInfoEditing-1CEzdT .wrapper-3t9DeA::after, .userSettingsAccount-2eMFVR .userInfoViewing-16kqK3 .wrapper-3t9DeA::after{
-    content:'';
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height: 100%;
-    opacity:1;
-    pointer-events:none;
-    background: var(--user-background) center/cover no-repeat;
-    z-index: -1;
-    pointer-events: none;
-    filter: brightness(.7) blur(5px);
-} */
 
 .background-1QDuV2{
     background: #fff2;
